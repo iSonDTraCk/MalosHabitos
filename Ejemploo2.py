@@ -1,12 +1,15 @@
-def calcular(a, b, c):
-    res = a * b + c
-    return res
+def calcular_producto_y_suma(factor1, factor2, sumando):
 
-def principal():
-    x = 5
-    y = 3
-    z = 7
-    resultado = calcular(x, y, z)
-    print("El resultado es:", resultado)
+    resultado = factor1 * factor2 + sumando
+    return resultado
 
-principal()
+def main():
+    factor1 = float(input("Ingrese el primer factor: "))
+    factor2 = float(input("Ingrese el segundo factor: "))
+    sumando = float(input("Ingrese el valor a sumar: "))
+
+    resultado = calcular_producto_y_suma(factor1, factor2, sumando)
+    print(f"El resultado de {factor1} * {factor2} + {sumando} es: {resultado}")
+
+if __name__ == "__main__":
+    main()
