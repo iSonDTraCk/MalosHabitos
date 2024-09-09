@@ -1,23 +1,23 @@
 # Función para calcular el área de un rectángulo
-def f(a, b):
-    result = a * b
-    return result
+def calcular_area_rectangulo(largo, ancho):
+    area = largo * ancho
+    return area
 
-# Función para calcular el área de un triángulo
-def g(b, h):
-    r = 0.5 * b * h
-    return r
+def calcular_area_triangulo(base, altura):
+    area = 0.5 * base * altura
+    return area
 
-# Función principal
 def main():
-    x = 4
-    y = 6
-    rect_area = f(x, y)
-    print("Área del rectángulo:", rect_area)
+    print("Ingrese las dimensiones del rectángulo:")
+    largo_rectangulo = float(input("Largo del rectángulo: "))
+    ancho_rectangulo = float(input("Ancho del rectángulo: "))
+    area_rectangulo = calcular_area_rectangulo(largo_rectangulo, ancho_rectangulo)
+    print(f"Área del rectángulo con largo {largo_rectangulo} y ancho {ancho_rectangulo} es: {area_rectangulo}")
+    print("\nIngrese las dimensiones del triángulo:")
+    base_triangulo = float(input("Base del triángulo: "))
+    altura_triangulo = float(input("Altura del triángulo: "))
+    area_triangulo = calcular_area_triangulo(base_triangulo, altura_triangulo)
+    print(f"Área del triángulo con base {base_triangulo} y altura {altura_triangulo} es: {area_triangulo}")
 
-    base = 5
-    altura = 8
-    tri_area = g(base, altura)
-    print("Área del triángulo:", tri_area)
-
-main()
+if __name__ == "__main__":
+    main()
